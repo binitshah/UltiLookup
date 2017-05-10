@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body ng-app="myApp" ng-controller="myCtrl">
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo" style="margin-left: 10px;">UltiLookUp</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="waves-effect waves-light btn">Refresh</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <div id="cardHolder" class="row" style="margin-top: 20px;">
+                <div class="col s12 m6" ng-repeat="person in people">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">{{ person.firstname + " " + person.lastname }}</span>
+                            <p>{{ person.address + ", " + person.city + " " + person.state }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
